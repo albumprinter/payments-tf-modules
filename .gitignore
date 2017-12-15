@@ -1,6 +1,14 @@
-# Compiled files
+# Terraform
 *.tfstate
 *.tfstate.backup
+*override.tf
+*.tfvars
+
+# folders
+.idea/*
+.vscode/*
+tools/
+tfplan/
 
 # Module directory
 .terraform/
