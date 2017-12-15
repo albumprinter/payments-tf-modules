@@ -35,7 +35,3 @@ resource "aws_security_group" "consul_server" {
     Description = "Consul server Security Group for '${var.app_name}' created by ${var.team}"
   }
 }
-
-output "ids" {
-  value = ["${aws_security_group.consul_server.id}"]
-}

@@ -50,7 +50,3 @@ resource "aws_autoscaling_group" "asg" {
     create_before_destroy = true
   }
 }
-
-output "asg_name" {
-  value = "${aws_autoscaling_group.asg.name}"
-}

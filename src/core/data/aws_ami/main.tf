@@ -11,7 +11,3 @@ data "aws_ami" "ami_data" {
     values = ["hvm"]
   }
 }
-
-output "id" {
-  value = "${data.aws_ami.ami_data.id}"
-}

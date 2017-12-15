@@ -50,7 +50,3 @@ resource "aws_iam_instance_profile" "consul_instance_profile" {
   name = "${var.environment}-${var.domain}-${var.app_name}-${uuid()}"
   role = "${aws_iam_role.instance_role.name}"
 }
-
-output "instance_profile_name" {
-  value = "${aws_iam_instance_profile.consul_instance_profile.name}"
-}
