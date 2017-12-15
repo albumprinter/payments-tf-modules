@@ -46,3 +46,9 @@ variable "consul_encrypt" {
 variable "cidr_blocks" {
   type = "list"
 }
+variable "shared_credentials_file" {
+  type = "string"
+}
+variable "credentials_profile" {
+  type = "string"
+}
