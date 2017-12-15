@@ -41,5 +41,8 @@ variable "wait_for_capacity_timeout" {
   type = "string"
 }
 variable "consul_encrypt" {
-  type    = "string"
+  type = "string"
+}
+variable "cidr_blocks" {
+  type = "list"
 }

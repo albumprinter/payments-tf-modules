@@ -22,7 +22,7 @@ module "security_group" {
   team        = "${var.team}"
   app_name    = "${var.app_name}"
   vpc_id      = "${module.availability_zones.vpc_id}"
-  cidr_blocks = ""
+  cidr_blocks = "${var.cidr_blocks}"
 }
 
 module "tf_options" {
