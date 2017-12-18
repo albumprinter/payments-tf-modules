@@ -1,7 +1,6 @@
 provider "aws" {
   region  = "${var.aws_region}"
   profile = "${var.credentials_profile}"
-  #  shared_credentials_file = "${var.shared_credentials_file}"
 }
 
 module "availability_zones" {
