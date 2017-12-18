@@ -46,9 +46,9 @@ variable "consul_encrypt" {
 variable "cidr_blocks" {
   type = "list"
 }
-#variable "credentials_profile" {
-#  type = "string"
-#}
+variable "credentials_profile" {
+  type = "string"
+}
 variable "hugo_paredes" {
   type = "string"
 }
