@@ -40,8 +40,7 @@ variable "team" {
   default = "payments"
 }
 variable "domain" {
-  type    = "string"
-  default = "payments"
+  type = "string"
 }
 variable "environment" {
   type = "string"
@@ -57,5 +56,4 @@ variable "template_file_options" {
 }
 variable "wait_for_capacity_timeout" {
   type = "string"
-  default = "5m"
 }
