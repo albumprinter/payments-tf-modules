@@ -49,6 +49,3 @@ variable "cidr_blocks" {
 variable "credentials_profile" {
   type = "string"
 }
-variable "hugo_paredes" {
-  type = "string"
-}
