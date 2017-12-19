@@ -40,15 +40,15 @@ variable "ec2_tag_value" {
 }
 variable "app_name" {
   type    = "string"
-  default = "demo"
+  default = "hugo"
 }
 variable "domain" {
   type    = "string"
-  default = "sample"
+  default = "hugo"
 }
 variable "team" {
   type    = "string"
-  default = "team"
+  default = "hugo"
 }
 variable "has_public_ip" {
   type    = "string"

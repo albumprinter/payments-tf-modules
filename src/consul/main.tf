@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "availability_zones" {
-  source = "../core/data/availability_zones"
+  source = "git@github.com:albumprinter/payments-tf-modules.git//src/core/data/availability_zones"
 }
 
 module "aws_roles" {
