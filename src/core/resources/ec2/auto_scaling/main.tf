@@ -1,5 +1,5 @@
 module "data_ami" {
-  source   = "../../../data/aws_ami"
+  source   = "git@github.com:albumprinter/payments-tf-modules.git//src/core/data/aws_ami"
   ami_name = "${var.aws_ami_name_prefix}"
 }
 
