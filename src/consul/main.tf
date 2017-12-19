@@ -7,7 +7,7 @@ module "availability_zones" {
 }
 
 module "aws_roles" {
-  source      = "../core/resources/iam/roles/describe_instance"
+  source      = "git@github.com:albumprinter/payments-tf-modules.git//src/core/resources/iam/roles/describe_instance"
   domain      = "${var.domain}"
   environment = "${var.environment}"
   team        = "${var.team}"
@@ -15,7 +15,7 @@ module "aws_roles" {
 }
 
 module "security_group" {
-  source      = "../core/resources/ec2/network_security/security_groups/consul/server"
+  source      = "git@github.com:albumprinter/payments-tf-modules.git//src/core/resources/ec2/network_security/security_groups/consul/server"
 
   domain      = "${var.domain}"
   environment = "${var.environment}"
@@ -26,7 +26,7 @@ module "security_group" {
 }
 
 module "tf_options" {
-  source = "../core/values/map"
+  source = "git@github.com:albumprinter/payments-tf-modules.git//src/core/values/map"
 
   value  = {
     bootstrap_expect      = "${var.asg_instance_count_min}"
@@ -37,7 +37,7 @@ module "tf_options" {
 }
 
 module "auto_scaling" {
-  source                    = "../core/resources/ec2/auto_scaling"
+  source                    = "git@github.com:albumprinter/payments-tf-modules.git//src/core/resources/ec2/auto_scaling"
 
   aws_ami_name_prefix       = "${var.aws_ami_name}"
   template_file_options     = "${module.tf_options.value}"
