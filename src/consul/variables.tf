@@ -1,12 +1,15 @@
 ### From *.tfvars
 variable "aws_key_name" {
   type    = "string"
+  default = "hp-key-var"
 }
 variable "environment" {
   type    = "string"
+  default = "test"
 }
 variable "consul_encrypt" {
   type = "string"
+  default = "F+7/vsMXW9VAWg5QHdI5bw=="
 }
 
 ### Defaults
@@ -60,9 +63,11 @@ variable "wait_for_capacity_timeout" {
 }
 variable "cidr_blocks" {
   type = "list"
-  default = ["192.168.0.0/16", "10.0.0.0/8", "77.60.83.148/32", "83.85.104.186/32"]
 }
-
+variable "internal_cidr_blocks" {
+  type = "list"
+  default = ["10.0.0.0/8"]
+}
 
 
 #variable "aws_region" {

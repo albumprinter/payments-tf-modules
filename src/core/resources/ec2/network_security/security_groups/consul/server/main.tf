@@ -6,19 +6,19 @@ resource "aws_security_group" "consul_server" {
     from_port   = "0"
     to_port     = "65535"
     protocol    = "tcp"
-    cidr_blocks = "${var.cidr_blocks}"
+    cidr_blocks = ["${var.cidr_blocks}"]
   }
   ingress {
     from_port   = "8500"
     to_port     = "8500"
     protocol    = "tcp"
-    cidr_blocks = "${var.cidr_blocks}"
+    cidr_blocks = ["${var.cidr_blocks}"]
   }
   ingress {
     from_port   = "22"
     to_port     = "22"
     protocol    = "tcp"
-    cidr_blocks = "${var.cidr_blocks}"
+    cidr_blocks = ["${var.cidr_blocks}"]
   }
 
   egress {

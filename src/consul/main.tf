@@ -22,8 +22,7 @@ module "security_group" {
   team        = "${var.team}"
   app_name    = "${var.app_name}"
   vpc_id      = "${module.availability_zones.vpc_id}"
-#  cidr_blocks = "${var.cidr_blocks}"
-  cidr_blocks = ["${module.availability_zones.public_subnet_cidr_blocks}"]
+  cidr_blocks = "${concat(module.availability_zones.public_subnet_cidr_blocks, var.cidr_blocks, var.internal_cidr_blocks)}"
 }
 
 module "tf_options" {
