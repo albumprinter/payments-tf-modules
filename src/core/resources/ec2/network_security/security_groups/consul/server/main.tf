@@ -3,8 +3,8 @@ resource "aws_security_group" "consul_server" {
   vpc_id = "${var.vpc_id}"
 
   ingress {
-    from_port   = "0"
-    to_port     = "65535"
+    from_port   = "8300"
+    to_port     = "8302"
     protocol    = "tcp"
     cidr_blocks = ["${var.cidr_blocks}"]
   }
