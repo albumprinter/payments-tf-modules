@@ -3,10 +3,12 @@ provider "aws" {
 }
 
 module "availability_zones" {
+#  source = "../core/data/availability_zones"
   source = "git@github.com:albumprinter/payments-tf-modules.git//src/core/data/availability_zones"
 }
 
 module "aws_roles" {
+#  source = "../core/resources/iam/roles/describe_instance"
   source      = "git@github.com:albumprinter/payments-tf-modules.git//src/core/resources/iam/roles/describe_instance"
   domain      = "${var.domain}"
   environment = "${var.environment}"
@@ -15,6 +17,7 @@ module "aws_roles" {
 }
 
 module "security_group" {
+#  source = "../core/resources/ec2/network_security/security_groups/consul/server"
   source      = "git@github.com:albumprinter/payments-tf-modules.git//src/core/resources/ec2/network_security/security_groups/consul/server"
 
   domain      = "${var.domain}"
@@ -22,10 +25,11 @@ module "security_group" {
   team        = "${var.team}"
   app_name    = "${var.app_name}"
   vpc_id      = "${module.availability_zones.vpc_id}"
-  cidr_blocks = "${concat(module.availability_zones.public_subnet_cidr_blocks, var.cidr_blocks, var.internal_cidr_blocks)}"
+  cidr_blocks = "${concat(module.availability_zones.public_subnet_cidr_blocks, var.cidr_blocks)}"
 }
 
 module "tf_options" {
+#  source = "../core/values/map"
   source = "git@github.com:albumprinter/payments-tf-modules.git//src/core/values/map"
 
   value  = {
@@ -38,7 +42,7 @@ module "tf_options" {
 
 module "auto_scaling" {
   source                    = "git@github.com:albumprinter/payments-tf-modules.git//src/core/resources/ec2/auto_scaling"
-
+#  source = "../core/resources/ec2/auto_scaling"
   aws_ami_name_prefix       = "${var.aws_ami_name}"
   template_file_options     = "${module.tf_options.value}"
   aws_key_name              = "${var.aws_key_name}"

@@ -1,7 +1,7 @@
 ### From *.tfvars
 variable "aws_key_name" {
   type    = "string"
-  default = "hp-key-var"
+  default = "hp-key-pair"
 }
 variable "environment" {
   type    = "string"
@@ -63,10 +63,7 @@ variable "wait_for_capacity_timeout" {
 }
 variable "cidr_blocks" {
   type = "list"
-}
-variable "internal_cidr_blocks" {
-  type = "list"
-  default = ["10.0.0.0/8"]
+  default = []
 }
 
 
