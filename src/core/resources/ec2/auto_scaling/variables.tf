@@ -57,3 +57,8 @@ variable "template_file_options" {
 variable "wait_for_capacity_timeout" {
   type = "string"
 }
+
+variable "placement_group_name" {
+  type = "string"
+  default = ""
+}

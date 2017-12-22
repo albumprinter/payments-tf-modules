@@ -19,6 +19,7 @@ resource "aws_launch_configuration" "lc" {
   associate_public_ip_address = "${var.associate_public_ip}"
   user_data                   = "${data.template_file.template_file.rendered}"
   security_groups             = ["${var.security_groups}"]
+  placement_group             = "${var.placement_group_name}"
 
   lifecycle {
     create_before_destroy = true
