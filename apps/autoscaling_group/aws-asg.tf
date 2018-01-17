@@ -1,10 +1,3 @@
-
-//locals {
-//  default_security_groups = "${list(aws_security_group.asg_sg.id)}"
-//  combined_security_groups = "${concat(list(aws_security_group.asg_sg.id), var.security_groups)}"
-//  security_groups         = "${length(var.security_groups) != 0 ? local.combined_security_groups : local.default_security_groups}"
-//}
-
 resource "aws_launch_configuration" "app_lc" {
   image_id                    = "${var.ami_id}"
   instance_type               = "${var.instance_type}"
