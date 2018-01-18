@@ -34,7 +34,7 @@ resource "aws_iam_policy" "app_instance_policy" {
 }
 
 //  Attach the policie to the role.
-resource "aws_iam_policy_attachment" "instance_leader_discovery" {
+resource "aws_iam_policy_attachment" "instance_policy" {
   name       = "${var.environment}-${var.domain}-${var.app_name}"
   roles      = ["${aws_iam_role.app_instance_role.name}"]
   policy_arn = "${aws_iam_policy.app_instance_policy.arn}"
