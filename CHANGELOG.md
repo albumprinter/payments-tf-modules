@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.0.6] - 2018-01-16
+### Fixed
+- Fix proper variable type for multiple SGs
+
 ## [0.0.5] - 2018-01-16
 ### Added
 - Add ELB outputs (arn, dns_name and name)
@@ -43,7 +47,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 0.0.1 - 2018-01-17
 Starting tag
 
-[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.5...HEAD
+[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.6...HEAD
+[0.0.6]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.2...v0.0.3
