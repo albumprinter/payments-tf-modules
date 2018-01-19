@@ -11,10 +11,9 @@ variable "lb_port" {}
 variable "lb_protocol" {}
 variable "asg_sg_from_port" {}
 variable "asg_sg_to_port" {}
-
 variable "elb_sg_from_port" {}
 variable "elb_sg_to_port" {}
-variable "elb_sg_cidr" {}
+
 variable "vpc_id" {}
 
 variable "asg_sg_protocol" {
@@ -26,6 +25,10 @@ variable "elb_sg_protocol" {
 }
 
 variable "asg_sg_cidr" {
+  type = "list"
+}
+
+variable "elb_sg_cidr" {
   type = "list"
 }
 
