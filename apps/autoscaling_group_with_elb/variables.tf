@@ -7,8 +7,6 @@ variable "aws_key_name" {}
 variable "domain" {}
 variable "user_data" {}
 variable "desired_nodes" {}
-variable "lb_port" {}
-variable "lb_protocol" {}
 variable "asg_sg_from_port" {}
 variable "asg_sg_to_port" {}
 variable "elb_sg_from_port" {}
