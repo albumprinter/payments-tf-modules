@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.0.9] - 2018-01-23
+### Removed
+- ASG with ELB: Removed unused variables
+
 ## [0.0.8] - 2018-01-23
 ### Added
 - ASG with ELB: Accept variable number of listeners
