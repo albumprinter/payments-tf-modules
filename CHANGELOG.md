@@ -23,7 +23,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.0.7] - 2018-01-16
+## [0.0.8] - 2018-01-23
+### Added
+- ASG with ELB: Accept variable number of listeners
+
+## [0.0.7] - 2018-01-23
 ### Added
 - output zone_id for dns record creation
 
@@ -51,7 +55,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 0.0.1 - 2018-01-17
 Starting tag
 
-[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.7...HEAD
+[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.8...HEAD
+[0.0.8]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.4...v0.0.5
