@@ -40,6 +40,10 @@ variable "elb_subnets" {
   type = "list"
 }
 
+variable "elb_listeners" {
+  type = "list"
+}
+
 variable "asg_tags" {
   type = "list"
 }

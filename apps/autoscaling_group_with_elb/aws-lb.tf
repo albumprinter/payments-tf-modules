@@ -1,13 +1,12 @@
-locals {
-  default_instance_port = "${var.lb_port}"
-  instance_port         = "${var.instance_port != "" ? var.instance_port : local.default_instance_port}"
-}
-
-locals {
-  default_instance_protocol = "${var.lb_protocol}"
-  instance_protocol         = "${var.instance_protocol != "" ? var.instance_protocol : local.default_instance_protocol}"
-}
-
+//locals {
+//  default_instance_port = "${var.lb_port}"
+//  instance_port         = "${var.instance_port != "" ? var.instance_port : local.default_instance_port}"
+//}
+//
+//locals {
+//  default_instance_protocol = "${var.lb_protocol}"
+//  instance_protocol         = "${var.instance_protocol != "" ? var.instance_protocol : local.default_instance_protocol}"
+//}
 
 resource "aws_elb" "asg_elb" {
   name = "${var.environment}-${var.app_name}-${var.domain}-elb"
@@ -15,12 +14,7 @@ resource "aws_elb" "asg_elb" {
   internal = "${var.is_internal}"
   security_groups = ["${concat(list(aws_security_group.elb_sg.id), var.elb_security_groups)}"]
 
-  listener {
-    instance_port     = "${local.instance_port}"
-    instance_protocol = "${local.instance_protocol}"
-    lb_port           = "${var.lb_port}"
-    lb_protocol       = "${var.lb_protocol}"
-  }
+  listener = ["${var.elb_listeners}"]
 
   health_check {
     healthy_threshold   = "${var.healthy_threshold}"
