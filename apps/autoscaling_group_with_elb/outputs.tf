@@ -16,3 +16,7 @@ output "elb_dns" {
 output "elb_name" {
   value = "${aws_elb.asg_elb.name}"
 }
+
+output "elb_zone_id" {
+  value = "${aws_elb.asg_elb.zone_id}"
+}
