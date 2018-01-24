@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * **Security** in case of vulnerabilities.
 
 ## [Unreleased]
+### Added
+- ASG: Documentation on how to use the module (README)
+- ASG with ELB: Documentation on how to use the module (README)
 
 ## [0.1.0] - 2018-01-24
 ### Changed
