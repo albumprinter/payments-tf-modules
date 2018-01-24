@@ -8,15 +8,8 @@ variable "user_data" {}
 variable "desired_nodes" {}
 variable "team_name" {}
 variable "vpc_id" {}
-variable "asg_sg_from_port" {}
-variable "asg_sg_to_port" {}
 
-
-variable "asg_sg_protocol" {
-  default = "TCP"
-}
-
-variable "asg_sg_cidr" {
+variable "asg_sg_ingress" {
   type = "list"
 }
 

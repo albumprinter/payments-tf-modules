@@ -46,13 +46,7 @@ resource "aws_security_group" "asg_sg" {
   name = "${var.environment}-${var.team_name}-${var.app_name}-sg"
   vpc_id = "${var.vpc_id}"
 
-  ingress {
-    from_port = "${var.asg_sg_from_port}"
-    to_port = "${var.asg_sg_to_port}"
-    protocol = "${var.asg_sg_protocol}"
-    cidr_blocks = [
-      "${var.asg_sg_cidr}"]
-  }
+  ingress = ["${var.asg_sg_ingress}"]
 
   egress {
     from_port = "0"

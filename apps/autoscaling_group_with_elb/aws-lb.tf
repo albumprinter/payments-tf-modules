@@ -36,13 +36,7 @@ resource "aws_security_group" "elb_sg" {
   name        = "${var.environment}-${var.app_name}-${var.domain}-elb-sg"
   vpc_id = "${var.vpc_id}"
 
-  ingress {
-    from_port = "${var.elb_sg_from_port}"
-    to_port = "${var.elb_sg_to_port}"
-    protocol = "${var.elb_sg_protocol}"
-    cidr_blocks = [
-      "${var.elb_sg_cidr}"]
-  }
+  ingress = ["${var.elb_sg_ingress}"]
 
   egress {
     protocol    = -1

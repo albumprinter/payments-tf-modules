@@ -1,5 +1,6 @@
 module "autoscaling_group" {
-  source = "git@github.com:albumprinter/payments-tf-modules.git//apps/autoscaling_group?ref=0.0.3"
+  source = "git@github.com:albumprinter/payments-tf-modules.git//apps/autoscaling_group?ref=0.1.0"
+//  source = "../autoscaling_group"
 
   ami_id = "${var.ami_id}"
   instance_type = "${var.instance_type}"
@@ -13,9 +14,7 @@ module "autoscaling_group" {
   subnet_ids = ["${var.subnet_ids}"]
   asg_tags = ["${var.asg_tags}"]
   vpc_id = "${var.vpc_id}"
-  asg_sg_to_port = "${var.asg_sg_to_port}"
-  asg_sg_from_port = "${var.asg_sg_from_port}"
+  asg_sg_ingress = ["${var.asg_sg_ingress}"]
   team_name = "${var.team_name}"
   asg_sg_tags = "${var.asg_sg_tags}"
-  asg_sg_cidr = "${var.asg_sg_cidr}"
 }

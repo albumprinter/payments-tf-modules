@@ -7,26 +7,13 @@ variable "aws_key_name" {}
 variable "domain" {}
 variable "user_data" {}
 variable "desired_nodes" {}
-variable "asg_sg_from_port" {}
-variable "asg_sg_to_port" {}
-variable "elb_sg_from_port" {}
-variable "elb_sg_to_port" {}
-
 variable "vpc_id" {}
 
-variable "asg_sg_protocol" {
-  default = "TCP"
-}
-
-variable "elb_sg_protocol" {
-  default = "TCP"
-}
-
-variable "asg_sg_cidr" {
+variable "asg_sg_ingress" {
   type = "list"
 }
 
-variable "elb_sg_cidr" {
+variable "elb_sg_ingress" {
   type = "list"
 }
 
@@ -70,14 +57,6 @@ variable "elb_tags" {
 
 variable "is_internal" {
   default = false
-}
-
-variable "instance_port" {
-  default = ""
-}
-
-variable "instance_protocol" {
-  default = ""
 }
 
 variable "healthy_threshold" {
