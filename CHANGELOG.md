@@ -22,7 +22,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * **Security** in case of vulnerabilities.
 
 ## [Unreleased]
+
+## [0.1.1] - 2018-02-15
 ### Added
+- ASG with ELB: Add variables for pass through to ASG module
 - ASG: Documentation on how to use the module (README)
 - ASG with ELB: Documentation on how to use the module (README)
 
@@ -67,7 +70,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 0.0.1 - 2018-01-17
 Starting tag
 
-[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.9...v0.1.0
 [0.0.9]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.7...v0.0.8
