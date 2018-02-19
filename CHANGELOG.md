@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.2] - 2018-02-19
+### Changed
+- ASG with ELB: update reference to proper version Autoscaling Group module
+
 ## [0.1.1] - 2018-02-15
 ### Added
 - ASG with ELB: Add variables for pass through to ASG module
