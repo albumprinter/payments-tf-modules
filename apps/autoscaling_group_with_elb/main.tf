@@ -17,4 +17,7 @@ module "autoscaling_group" {
   asg_sg_ingress = ["${var.asg_sg_ingress}"]
   team_name = "${var.team_name}"
   asg_sg_tags = "${var.asg_sg_tags}"
+  associate_public_ip = "${var.associate_public_ip}"
+  role_policy = "${var.role_policy}"
+  role_policy_description = "${var.role_policy_description}"
 }

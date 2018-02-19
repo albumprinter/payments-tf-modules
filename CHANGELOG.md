@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.1.3] - 2018-02-19
 ### Changed
-- ASG with ELB: remove defaults to Autoscaling Group module for pass through
+- ASG with ELB: reference defaults to Autoscaling Group module for pass through
 
 ## [0.1.2] - 2018-02-19
 ### Changed
