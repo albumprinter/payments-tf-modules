@@ -8,6 +8,9 @@ variable "domain" {}
 variable "user_data" {}
 variable "desired_nodes" {}
 variable "vpc_id" {}
+variable "associate_public_ip" {}
+variable "role_policy" {}
+variable "role_policy_description" {}
 
 variable "asg_sg_ingress" {
   type = "list"
@@ -53,33 +56,6 @@ variable "elb_security_groups" {
 
 variable "elb_tags" {
   type = "map"
-}
-
-variable "associate_public_ip" {
-  default = false
-}
-
-variable "role_policy" {
-  default = <<EOF
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "Stmt1468377974000",
-            "Effect": "Allow",
-            "Action": [
-                "autoscaling:DescribeAutoScalingInstances",
-                "ec2:DescribeInstances"
-            ],
-            "Resource": ["*"]
-        }
-    ]
-}
-    EOF
-}
-
-variable "role_policy_description" {
-  default = "This policy is used for Autoclustering features."
 }
 
 variable "is_internal" {
