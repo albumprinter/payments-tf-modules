@@ -1,5 +1,5 @@
 module "autoscaling_group" {
-  source = "git@github.com:albumprinter/payments-tf-modules.git//apps/autoscaling_group?ref=0.1.2"
+  source = "git@github.com:albumprinter/payments-tf-modules.git//apps/autoscaling_group?ref=0.1.3"
 //  source = "../autoscaling_group"
 
   ami_id = "${var.ami_id}"

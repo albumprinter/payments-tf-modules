@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.3] - 2018-02-19
+### Changed
+- ASG with ELB: remove defaults to Autoscaling Group module for pass through
+
 ## [0.1.2] - 2018-02-19
 ### Changed
 - ASG with ELB: update reference to proper version Autoscaling Group module
@@ -74,7 +78,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 0.0.1 - 2018-01-17
 Starting tag
 
-[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/albumprinter/payments-tf-modules/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/albumprinter/payments-tf-modules/compare/v0.0.9...v0.1.0
